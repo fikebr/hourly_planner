@@ -1,0 +1,29 @@
+date_text = "_Fri 10/31 Halloween_"
+
+schedule_texts = [
+    "06:00 | 2 | mourning routine",
+    "07:00 | 2 | breakfast",
+    "08:00 | 6 | *Costume Work",
+    "11:30 | 1 | *Hour Planner",
+    "12:00 | 2 | Lunch + walk",
+    "13:00 | 2 | CVS & Ribbon",
+    "14:30 | 1 | Pickup Nora & Jack",
+    "15:00 | 2 | *Mockup",
+    "16:00 | 1 | Sarah home & Get Dressed",
+    "16:30 | 1 | Pack for Halloween",
+    "17:00 | 2 | Leave for Halloween"
+]
+
+notes = [
+    "Next Strawberry mtg: 11/12 @ 1 PM",
+    "Grocery list: milk, eggs, berries"
+]
+
+habits = [
+    "Walk",
+    "Stretch",
+    "Water x3",
+    "10 min sweat"
+]
+
+
