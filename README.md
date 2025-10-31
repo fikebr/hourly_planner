@@ -75,10 +75,13 @@ habits = [
 
 ```bash
 # Generate from TOML file
-uv run python main.py
+uv run python main.py -t your_schedule.toml
 
-# Or specify a different TOML file
-# Edit main.py to change: generate_from_toml("your_file.toml")
+# Example
+uv run python main.py -t 2025-10-31.toml
+
+# View help
+uv run python main.py --help
 ```
 
 ### Python API Example
