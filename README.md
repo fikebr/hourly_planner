@@ -73,6 +73,8 @@ habits = [
 
 ### Running with TOML
 
+#### Direct Python Execution
+
 ```bash
 # Generate from TOML file
 uv run python main.py -t your_schedule.toml
@@ -83,6 +85,31 @@ uv run python main.py -t 2025-10-31.toml
 # View help
 uv run python main.py --help
 ```
+
+#### Windows Batch Script (Convenient)
+
+For Windows users, a batch script `hourly.bat` is provided for easier execution:
+
+**Setup:**
+1. Copy `hourly.bat` to a folder in your system PATH
+2. Edit the batch file to update the project path if different from `E:\Dropbox\Dev\Projects\Life Projects\hourly_planner`
+
+**Usage:**
+```cmd
+# Navigate to your TOML files directory
+cd E:\Dropbox\daily_planner
+
+# Run the planner
+hourly 2025-10-31.toml
+
+# The PDF will be generated in the same directory as the TOML file
+```
+
+The batch script handles:
+- Locating the TOML file in your current directory
+- Switching to the project directory
+- Running the planner with the correct paths
+- Returning to your original directory
 
 ### Python API Example
 
@@ -146,12 +173,9 @@ The TOML format automatically cycles through these colors for schedule blocks:
 - **`text_col_width`**: Width of schedule text column
 - **`right_col_width`**: Width of right sidebar
 
-## Examples
+## Example TOML File
 
-See these example TOML files in the project:
-
-- `test_v2_format.toml` - Simple format example
-- `2025-10-31_hourly.toml` - Full day example
+Create a TOML file with your daily schedule. See the format specification in `docs/toml_format_v2.md` for details.
 
 ## Project Structure
 
@@ -162,7 +186,7 @@ hourly_planner/
 ├── docs/
 │   └── toml_format_v2.md         # TOML format specification
 ├── main.py                        # Main entry point
-├── test_v2_format.toml            # Example TOML file
+├── hourly.bat                     # Windows batch script (optional)
 ├── pyproject.toml                 # Project dependencies
 └── README.md                      # This file
 ```

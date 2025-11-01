@@ -263,8 +263,8 @@ def generate_from_toml(toml_path="test_v2_format.toml"):
             logger.error("Please check the TOML syntax and try again.")
             raise SystemExit(1)
         
-        # 1. Derive output_path from toml filename
-        output_path = toml_file.stem + ".pdf"
+        # 1. Derive output_path from toml filename (same directory as TOML file)
+        output_path = str(toml_file.with_suffix('.pdf'))
         
         # 2. Date text
         date_text = config.get("date_text", "____________________")
